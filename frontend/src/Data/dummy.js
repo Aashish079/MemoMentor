@@ -228,16 +228,7 @@ export const areaCustomSeries = [
     opacity: '0.8',
     type: 'SplineArea',
     width: '2',
-  },
-  {
-    dataSource: areaChartData[2],
-    xName: 'x',
-    yName: 'y',
-    name: 'Germany',
-    opacity: '0.8',
-    type: 'SplineArea',
-    width: '2',
-  },
+  }
 ];
 
 export const barChartData = [
@@ -519,44 +510,7 @@ export const links = [
       
     ],
   },
-  {
-    title: 'Charts',
-    links: [
-      {
-        name: 'line',
-        icon: <AiOutlineStock />,
-      },
-      {
-        name: 'area',
-        icon: <AiOutlineAreaChart />,
-      },
-
-      {
-        name: 'bar',
-        icon: <AiOutlineBarChart />,
-      },
-      {
-        name: 'pie',
-        icon: <FiPieChart />,
-      },
-      {
-        name: 'financial',
-        icon: <RiStockLine />,
-      },
-      {
-        name: 'color-mapping',
-        icon: <BsBarChart />,
-      },
-      {
-        name: 'pyramid',
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: 'stacked',
-        icon: <AiOutlineBarChart />,
-      },
-    ],
-  },
+  
 ];
 
 export const cartData = [
@@ -658,8 +612,8 @@ export const recentTransactions = [
   {
     icon: <BsCurrencyDollar />,
     amount: '+$350',
-    title: 'Paypal Transfer',
-    desc: 'Money Added',
+    title: 'Projectile Motion Numericals',
+    desc: 'Page number 23 question number 5 to 20',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
     pcColor: 'green-600',
@@ -667,8 +621,8 @@ export const recentTransactions = [
   {
     icon: <BsShield />,
     amount: '-$560',
-    desc: 'Bill Payment',
-    title: 'Wallet',
+    desc: 'Vector calculus',
+    title: 'All questions Exercise no 5',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
     pcColor: 'red-600',
@@ -676,7 +630,7 @@ export const recentTransactions = [
   {
     icon: <FiCreditCard />,
     amount: '+$350',
-    title: 'Credit Card',
+    title: 'Vector Algebra',
     desc: 'Money reversed',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
@@ -686,8 +640,8 @@ export const recentTransactions = [
   {
     icon: <TiTick />,
     amount: '+$350',
-    title: 'Bank Transfer',
-    desc: 'Money Added',
+    title: 'Geometry ',
+    desc: 'Money reversed',
 
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
@@ -697,7 +651,7 @@ export const recentTransactions = [
     icon: <BsCurrencyDollar />,
     amount: '-$50',
     percentage: '+38%',
-    title: 'Refund',
+    title: 'Vector calculus',
     desc: 'Payment Sent',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
@@ -778,11 +732,11 @@ export const medicalproBranding = {
       desc: 'Oct 23, 2021',
     },
     {
-      title: 'Budget',
+      title: 'Assignment',
       desc: '$98,500',
     },
     {
-      title: 'Expense',
+      title: 'Submitted',
       desc: '$63,000',
     },
   ],
@@ -3096,7 +3050,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'Germany',
+    name: 'Submitted',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
@@ -3104,18 +3058,12 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'England',
+    name: 'Assignment',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
 
-  { dataSource: lineChartData[2],
-    xName: 'x',
-    yName: 'y',
-    name: 'India',
-    width: '2',
-    marker: { visible: true, width: 10, height: 10 },
-    type: 'Line' },
+ 
 
 ];
 
@@ -3181,7 +3129,7 @@ export const stackedCustomSeries = [
   { dataSource: stackedChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'Budget',
+    name: 'Assignment',
     type: 'StackingColumn',
     background: 'blue',
 
@@ -3190,7 +3138,7 @@ export const stackedCustomSeries = [
   { dataSource: stackedChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'Expense',
+    name: 'Submitted',
     type: 'StackingColumn',
     background: 'red',
 

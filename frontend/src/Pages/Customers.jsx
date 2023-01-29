@@ -5,6 +5,9 @@ import {customersData, customersGrid} from '../Data/dummy';
 import {Header} from '../Components';
 
 const Customers = () => {
+  const handleChange=()=>{
+    alert("He")
+  }
   return (
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
       <Header category="Page" title="Customers" />
@@ -15,6 +18,7 @@ const Customers = () => {
         toolbar={['Delete']}
         editSettings={{allowDeleting: true, allowEditing: true}}
         width= 'auto'
+        actionBegin={(e)=>console.log(e)}
       >
         <ColumnsDirective>
           {customersGrid.map((item, index) => <ColumnDirective key={index} {...item} />)}

@@ -7,7 +7,7 @@ import {IoMdAddCircle} from 'react-icons/io'
 
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './Components';
-import { Dashboard, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './Pages';
+import { Dashboard, Orders, Calendar, Completed_Assign, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './Pages';
 import './App.css';
 
 import { useStateContext } from './Contexts/ContextProvider';
@@ -45,19 +45,7 @@ const App = () => {
               </button>
 
             </TooltipComponent>
-            <div className='fixed right-4 bottom-20' style={{zIndex:'1'}}>
-              <TooltipComponent content='Add' position="Top">
-              <button
-                type="button"
-          
-                onClick={() => setShowAddMenu(true)}
-                style={{ background: currentColor, borderRadius: '50%' }}
-                className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
-              >
-                  <IoMdAddCircle />
-                </button>
-              </TooltipComponent>
-            </div>
+            <AddTodo />
           </div>
           {activeMenu ? (
             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
@@ -68,7 +56,7 @@ const App = () => {
               <Sidebar />
             </div>
           )}
-          {console.log(showAddMenu)}
+          
           <div
             className={
               activeMenu
@@ -90,7 +78,7 @@ const App = () => {
 
                 {/* pages  */}
                 <Route path="/pending-assignments" element={<Orders />} />
-                <Route path="/completed-assignments" element={<Employees />} />
+                <Route path="/completed-assignments" element={<Completed_Assign />} />
                 <Route path="/pending-revisions" element={<Customers />} />
                 <Route path="/completed-revisions" element={<Customers />} />
 

@@ -15,7 +15,8 @@ const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 
 const authRoute = require("./routes/auth");
-const jobsRoute = require("./routes/jobs");
+const assignmentRoute = require("./routes/assignments");
+const revisionRoute = require("./routes/revisions")
 
 const connectDB = require("./db/connect");
 
@@ -32,10 +33,11 @@ const limiter = rateLimiter({
 app.use(limiter);
 // routes
 app.get("/", (req, res) => {
-	res.send("jobs api");
+	res.send("Memo Mentor API");
 });
 app.use("/api/v1/auth", authRoute);
-app.use("/api/v1/jobs", authMiddleware, jobsRoute);
+app.use("/api/v1/assignments", authMiddleware, assignmentRoute);
+app.use("/api/v1/revisions", authMiddleware, revisionRoute)
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
@@ -45,6 +47,14 @@ const port = process.env.PORT || 3000;
 const start = async () => {
 	try {
 		await connectDB(process.env.MONGO_URI);
+		setInterval(async () => {
+			const Assignment = require('./models/Revision')
+			const revisions = await Assignment.find({})
+			for (const revision of revisions) {
+				revision.currentCount += 1
+				await Assignment.findByIdAndUpdate({ _id: revision._id }, revision, { new: true, runValidators: true })
+			}
+		}, 24 * 60 * 60 * 1000)
 		app.listen(port, () =>
 			console.log(`Server is listening on port ${port}...`)
 		);

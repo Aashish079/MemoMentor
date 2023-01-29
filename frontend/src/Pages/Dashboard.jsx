@@ -30,7 +30,7 @@ const Dashboard = () => {
             {recentTransactions.map((item) => (
               <div key={item.title} className="flex justify-between mt-4">
                 <div className="flex gap-4">
-                  <button
+                  {/* <button
                     type="button"
                     style={{
                       color: item.iconColor,
@@ -39,13 +39,13 @@ const Dashboard = () => {
                     className="text-2xl rounded-lg p-4 hover:drop-shadow-xl"
                   >
                     {item.icon}
-                  </button>
+                  </button> */}
                   <div>
                     <p className="text-md font-semibold">{item.title}</p>
                     <p className="text-sm text-gray-400">{item.desc}</p>
                   </div>
                 </div>
-                <p className={`text-${item.pcColor}`}>{item.amount}</p>
+                {/* <p className={`text-${item.pcColor}`}>{item.amount}</p> */}
               </div>
             ))}
           </div>
@@ -63,14 +63,14 @@ const Dashboard = () => {
         </div>
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl">
           <div className="flex justify-between items-center gap-2">
-            <p className="text-xl font-semibold">Upcoming Revisions</p>
+            <p className="text-xl font-semibold">Todays Revisions</p>
             <DropDown currentMode={currentMode} />
           </div>
           <div className="mt-10 w-72 md:w-400">
             {recentTransactions.map((item) => (
               <div key={item.title} className="flex justify-between mt-4">
                 <div className="flex gap-4">
-                  <button
+                  {/* <button
                     type="button"
                     style={{
                       color: item.iconColor,
@@ -79,13 +79,13 @@ const Dashboard = () => {
                     className="text-2xl rounded-lg p-4 hover:drop-shadow-xl"
                   >
                     {item.icon}
-                  </button>
+                  </button> */}
                   <div>
                     <p className="text-md font-semibold">{item.title}</p>
                     <p className="text-sm text-gray-400">{item.desc}</p>
                   </div>
                 </div>
-                <p className={`text-${item.pcColor}`}>{item.amount}</p>
+                {/* <p className={`text-${item.pcColor}`}>{item.amount}</p> */}
               </div>
             ))}
           </div>
@@ -270,13 +270,13 @@ const Dashboard = () => {
             {weeklyStats.map((item) => (
               <div key={item.title} className="flex justify-between mt-4 w-full">
                 <div className="flex gap-4">
-                  <button
+                  {/* <button
                     type="button"
                     style={{ background: item.iconBg }}
                     className="text-2xl hover:drop-shadow-xl text-white rounded-full p-3"
                   >
                     {item.icon}
-                  </button>
+                  </button> */}
                   <div>
                     <p className="text-md font-semibold">{item.title}</p>
                     <p className="text-sm text-gray-400">{item.desc}</p>
@@ -292,7 +292,7 @@ const Dashboard = () => {
           </div>
 
         </div>
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        {/* <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-semibold">MedicalPro Branding</p>
             <button type="button" className="text-xl font-semibold text-gray-400">
@@ -346,11 +346,11 @@ const Dashboard = () => {
 
             
           </div>
-        </div>
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
+        </div> */}
+        {/* <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3"> */}
           
          
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );
